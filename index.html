@@ -1,0 +1,84 @@
+<html>
+<head>
+    <style>
+        * {
+  /*setting the main style
+  */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 99, 102);
+}
+
+.loader {
+  /* centering the .loader class
+  */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /*styling .loader class
+  */
+  width: 150px;
+  height: 150px;
+  background: none;
+  /*border: 3px dashed rgb(0, 78, 82);*/
+}
+
+/*creating the squares - you can play with the width and height of these elements.
+*/
+.square {
+  position: absolute;
+  width: 50px;
+  height: 150px;
+  background: rgb(0, 189, 214);
+  animation: turn 4s linear 0.8s infinite alternate;
+}
+
+.square:nth-child(2) {
+  left: 50px;
+  background: rgb(0, 151, 168);
+}
+
+.square:nth-child(3) {
+  left: 100px;
+  background: rgb(0, 131, 143);
+}
+
+/* creating the simple animation using keyframes
+*/
+@keyframes turn {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+        h1{
+            text-align: center;
+            font-family: sans-serif;
+        }
+    
+    
+    </style>
+    
+    
+    </head>
+<body>
+    <h1>Pure css page loader animation<br>
+    TEA-144</h1>
+    <div class="loader">
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+</div>
+<!--Simple HTML & CSS loader-->
+    
+    
+    </body>
+</html>
